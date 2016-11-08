@@ -81,7 +81,7 @@
 
       - string:
           name: scenario_file
-          default: qa-scenario-2a.yml
+          default: qa-scenario-2a.yaml
           description: Scenario YAML file name
 
       # Parameters for qa_crowbarsetup.sh
