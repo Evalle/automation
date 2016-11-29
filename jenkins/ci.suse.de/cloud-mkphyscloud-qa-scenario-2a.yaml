@@ -6,7 +6,7 @@
       <a href='https://github.com/SUSE-Cloud/automation/tree/master/jenkins/ci.suse.de/'>git</a>
       </b>
 
-      This job will redeploy scenario-2b:
+      This job will redeploy scenario-2a:
         - total 7 nodes including admin node
         - database: default, postgresql
         - pacemaker: 3 clusters with 2 nodes (SBD)
@@ -116,7 +116,7 @@
 
       - string:
           name: commands
-          default: prepareinstallcrowbar bootstrapcrowbar installcrowbar allocate setup_aliases waitcloud
+          default: prepareinstallcrowbar bootstrapcrowbar installcrowbar allocate waitcloud setup_aliases
           description: All the steps that needs to be completed to have cloud installed
 
       - text:
