@@ -6,7 +6,7 @@
       <a href='https://github.com/SUSE-Cloud/automation/tree/master/jenkins/ci.suse.de/'>git</a>
       </b>
 
-      This job will redeploy scenario-2b:
+      This job will redeploy scenario-2a:
         - total 7 nodes including admin node
         - database: default, postgresql
         - pacemaker: 3 clusters with 2 nodes (SBD)
@@ -16,6 +16,7 @@
         - nova: ssl, libvirt migration enabled, shared storage, kvm kernel samepage merging, 1 KVM
         - cinder: Local file
         - neutron: linuxbridge
+        - manila: NetApp backend
 
       Warning: It will wipe all machines!
 

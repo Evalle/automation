@@ -200,15 +200,15 @@ proposals:
         json: '{"custom-key": "custom-value"}'
   deployment:
     elements:
-      ec2-api:
-      - cluster:services
-      nova-controller:
-      - cluster:services
-      nova-compute-hyperv: []
-      nova-compute-kvm:
-      - "@@computekvm@@"
-      nova-compute-qemu: []
-      nova-compute-xen: []
+     ec2-api:
+     - cluster:services
+     nova-controller:
+     - cluster:services
+     nova-compute-hyperv: []
+     nova-compute-kvm:
+     - "@@computekvm@@"
+     nova-compute-qemu: []
+     nova-compute-xen: []
 
 # Because neutron and nova are deployed on different clusters, we need
 # to commit neutron proposal again after nova to pick up the nova authentication

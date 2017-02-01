@@ -5171,18 +5171,8 @@ function onadmin_batch
     if iscloudver 5plus; then
         sed -i "s/##hypervisor_ip##/$admingw/g" ${scenario}
         if iscloudver 6plus; then
-            safely crowbar batch --exclude manila --timeout 2400 build ${scenario}
-            if grep -q "barclamp: manila" ${scenario}; then
-                get_novacontroller
-                safely oncontroller manila_generic_driver_setup
-                get_manila_service_instance_details
-                sed -i "s/##manila_instance_name_or_id##/$manila_service_vm_uuid/g; \
-                        s/##service_net_name_or_ip##/$manila_tenant_vm_ip/g; \
-                        s/##tenant_net_name_or_ip##/$manila_tenant_vm_ip/g" \
-                        ${scenario}
-                safely crowbar batch --include manila --timeout 2400 build ${scenario}
-            fi
-        else
+            safely crowbar batch --timeout 2400 build ${scenario}
+       else
             safely crowbar batch --timeout 2400 build ${scenario}
         fi
         return $?
